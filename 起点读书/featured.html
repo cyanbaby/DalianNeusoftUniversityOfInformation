@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>精选</title>
+    <link rel="stylesheet" href="iconfont/iconfont.css" />
+
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        min-width: 23.4375rem;
+      }
+
+      .fixed-nav {
+        height: 4.6875rem;
+        display: flex;
+        justify-content: space-between;
+        border-top: 0.0625rem solid #e2e2e2;
+        background-color: #fff;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        color: #f82c3d;
+      }
+
+      .fixed-nav .fixed-nav-item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #000;
+      }
+      .active.fixed-nav-item {
+        color: #fc2c40;
+      }
+
+      .fixed-nav-item span {
+        font-size: 0.875rem;
+      }
+      a {
+        text-decoration: none;
+      }
+      .index-box {
+        margin-bottom: 5rem;
+        overflow: hidden;
+      }
+
+      body {
+        background-image: url(./images/featured/featured.jpg);
+        background-repeat: repeat;
+        background-size: 300%;
+      }
+      .header {
+        display: flex;
+        align-items: center;
+        height: 4.6875rem;
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+      }
+      .header span {
+        margin-right: 2.25rem;
+        color: #b6b7bb;
+      }
+      .header span.bold {
+        font-size: 1.125rem;
+        font-weight: bold;
+        color: #000;
+      }
+      .header i {
+        margin-left: auto;
+        font-size: 1.25rem;
+      }
+      .featured {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+      }
+      .featured-card,
+      .featured {
+        display: flex;
+        flex: 1;
+      }
+      .featured-left {
+        flex: 1;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        margin-right: 0.625rem;
+        padding: 0.625rem;
+        background-color: #fdf7ea;
+        border-radius: 0.75rem;
+      }
+      .book-all {
+        display: flex;
+      }
+      .book-item {
+        flex: 1;
+        overflow: hidden;
+      }
+
+      .book-all .book-item {
+        margin-right: 0.25rem;
+      }
+
+      .book-all .book-title {
+        font-size: 0.75rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        height: 2rem;
+      }
+      .book-item img {
+        width: 100%;
+        border-radius: 0.25rem;
+      }
+      .featured .iconfont {
+        padding-left: 0.375rem;
+        padding-right: 0.375rem;
+      }
+
+      .left-box,
+      .featured-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .left-box {
+        margin-bottom: 0.625rem;
+      }
+      .right-box {
+        height: 5rem;
+        width: 3.75rem;
+        overflow: hidden;
+      }
+      .right-box img {
+        height: 100%;
+        border-top-left-radius: 0.25rem;
+        border-top-right-radius: 0.25rem;
+      }
+      .featured-card-top {
+        background-color: #f8f9fd;
+        padding: 0.625rem 0.625rem 0 0.625rem;
+        margin-bottom: 0.625rem;
+        border-radius: 0.75rem;
+      }
+      .featured-card-bottom {
+        background-color: #f4fcfe;
+        padding: 0.625rem 0.625rem 0 0.625rem;
+        border-radius: 0.75rem;
+      }
+      .tag {
+        background-color: #f95965;
+        color: #fff;
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+        border-bottom-right-radius: 50%;
+        border-bottom-left-radius: none;
+        font-size: 0.75rem;
+        padding-left: 0.375rem;
+        padding-right: 0.375rem;
+        padding-bottom: 0.375rem;
+        padding-top: 0.125rem;
+      }
+      .red-text {
+        color: #f33c52;
+        font-size: 1rem;
+      }
+      .left-title-box {
+        height: 4rem;
+        display: flex;
+        align-items: center;
+      }
+
+      .orange-text {
+        color: #fe917e;
+      }
+      .hui-text {
+        color: #96979b;
+      }
+      .tip {
+        font-size: 0.75rem;
+        color: #999ea1;
+      }
+      .title span {
+        font-size: 1rem;
+      }
+      .new-book {
+        background-color: #fff;
+        margin-left: 0.75rem;
+        margin-right: 0.75rem;
+      }
+      .new-book-header {
+        display: flex;
+        padding: 0.75rem;
+        color: #999ea1;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
+      .new-book-header .bold {
+        font-size: 1.125rem;
+        font-weight: bold;
+        color: #000;
+      }
+      .line {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+      }
+      .new-book-header .margin-left {
+        color: #000;
+        font-size: 0.875rem;
+        margin-left: auto;
+      }
+      .new-book-list {
+        margin-left: 0.75rem;
+        margin-right: 0.75rem;
+        background-color: #fff;
+        overflow: hidden;
+      }
+      .new-book-item {
+        margin-bottom: 1.25rem;
+        height: 6.5rem;
+        overflow: hidden;
+        display: flex;
+      }
+      .new-book-item img {
+        margin-right: 1rem;
+        border-radius: 0.25rem;
+      }
+      .book-item-title,
+      .book-item-tip {
+        color: #999ea1;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        height: 2.625rem;
+      }
+      .book-item-title {
+        color: #000;
+      }
+      .book-item-zuoze {
+        color: #999ea1;
+      }
+      .book-item-bottom {
+        display: flex;
+        font-size: 0.75rem;
+        align-items: center;
+      }
+      .book-item-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 1;
+      }
+      .tags {
+        display: flex;
+        margin-left: auto;
+      }
+      .update-btn {
+        display: flex;
+        align-items: center;
+      }
+      .book-item-red {
+        background-color: #ffe5e8;
+        color: #d94055;
+        border-radius: 0.25rem;
+        padding: 0.125rem;
+        font-size: 0.75rem;
+        margin-right: 0.5rem;
+      }
+      .book-item-tag {
+        background-color: #f7f7f7;
+        color: #adadad;
+        border-radius: 0.25rem;
+        padding: 0.125rem;
+        font-size: 0.75rem;
+        overflow: hidden;
+        margin-right: 0.5rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="index-box">
+      <div class="header">
+        <span class="bold">新书</span>
+        <span>男生</span>
+        <span>女生</span>
+        <span>漫画</span>
+        <i class="iconfont icon-sousuo"></i>
+      </div>
+
+      <div class="featured">
+        <div class="featured-left">
+          <div class="left-title-box">
+            <span class="red-text">新书种草</span>
+            <i class="orange-text iconfont icon-xiangyou1"></i>
+            <span class="tag">上新</span>
+          </div>
+          <div class="book-all">
+            <div class="book-item">
+              <img src="images/home/book-01.png" alt="明朝那些事" />
+              <span class="book-title">兰芳</span>
+            </div>
+            <div class="book-item">
+              <img src="images/home/book-02.png" alt="明朝那些事" />
+              <span class="book-title">明朝那些事</span>
+            </div>
+            <div class="book-item">
+              <img src="images/home/book-03.png" alt="明朝那些事" />
+              <span class="book-title">明朝那些事</span>
+            </div>
+          </div>
+        </div>
+        <div class="featured-right">
+          <div class="featured-card featured-card-top">
+            <div class="left-box">
+              <div class="title">
+                <span>女生新书</span>
+                <i class="hui-text iconfont icon-xiangyou1"></i>
+              </div>
+              <div class="tip">女生潜力新书</div>
+            </div>
+            <div class="right-box">
+              <img src="images/home/book-03.png" alt="明朝那些事" />
+            </div>
+          </div>
+
+          <div class="featured-card featured-card-bottom">
+            <div class="left-box">
+              <div class="title">
+                <span>女生新书</span>
+                <i class="hui-text iconfont icon-xiangyou1"></i>
+              </div>
+              <div class="tip">女生潜力新书</div>
+            </div>
+            <div class="right-box">
+              <img src="images/home/book-03.png" alt="明朝那些事" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="new-book list">
+        <div class="new-book-header">
+          <span class="bold">精选新书</span>
+          <span class="line">|</span>
+          <span>每周精选优质新作</span>
+          <div class="margin-left update-btn">
+            <i class="iconfont icon-shuaxin"></i>换一换
+          </div>
+        </div>
+        <div class="new-book-list"></div>
+      </div>
+
+      <div class="new-book more">
+        <div class="new-book-header">
+          <span class="bold">新书入库</span>
+          <span class="line">|</span>
+          <span>近14天签约的作品</span>
+          <a href="/discover.html" class="margin-left update-btn">
+            更多
+            <i class="iconfont icon-xiangyou1"></i>
+          </a>
+        </div>
+        <div class="new-book-list"></div>
+      </div>
+
+      <div class="fixed-nav"></div>
+    </div>
+    <script>
+      let books = [
+        {
+          title: "大明：我，祝你生日快乐，生日快乐，生日快乐，生日快乐，生日快乐，生日快乐",
+          url: "images/home/book-01.png",
+          tip: "这都是明朝那些故事，很精彩",
+          zuozhe: "天蚕土豆",
+          num: 15,
+          tag1: "日更三千",
+          tag2: "科技",
+          tag3: "穿越",
+        },
+        {
+          title: "明朝那些事",
+          url: "images/home/book-02.png",
+          tip: "这都是明朝那些故事，很精彩",
+          zuozhe: "天蚕土豆",
+          num: 15,
+          tag1: "日更三千",
+          tag2: "科技",
+          tag3: "穿越",
+        },
+        {
+          title: "明朝那些事",
+          url: "images/home/book-03.png",
+          tip: "这都是明朝那些故事，很精彩",
+          zuozhe: "天蚕土豆",
+          num: 15,
+          tag1: "日更三千",
+          tag2: "科技",
+          tag3: "穿越",
+        },
+        {
+          title: "明朝那些事",
+          url: "images/home/book-04.png",
+          tip: "这都是明朝那些故事，很精彩",
+          zuozhe: "天蚕土豆",
+          num: 15,
+          tag1: "日更三千",
+          tag2: "科技",
+          tag3: "穿越",
+        },
+        {
+          title: "明朝那些事",
+          url: "images/home/book-05.png",
+          tip: "这都是明朝那些故事，很精彩",
+          zuozhe: "天蚕土豆",
+          num: 15,
+          tag1: "日更三千",
+          tag2: "科技",
+          tag3: "穿越",
+        },
+      ];
+
+      function getBooksString() {
+        return books
+          .map((book) => {
+            return `
+          <div class="new-book-item">
+            <img src="${book.url}" alt="明朝那些事" />
+            <div class="book-item-right">
+              <div class="book-item-title">${book.title}</div>
+              <div class="book-item-tip">${book.tip}</div>
+              <div class="book-item-bottom">
+                <div class="book-item-zuoze">${book.zuozhe} · ${book.num}万字</div>
+                <div class="tags">
+                  <div class="book-item-red">${book.tag1}</div>
+                  <div class="book-item-tag">${book.tag2}</div>
+                  <div class="book-item-tag">${book.tag3}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+          })
+          .join("");
+      }
+
+      // 使用 map 方法生成 HTML 字符串
+      let booksStr = getBooksString();
+
+      // 获取目标元素
+      let listBox = document.querySelector(".new-book.list .new-book-list");
+
+      // 将生成的 HTML 字符串插入到目标元素的开始位置
+      listBox.insertAdjacentHTML("afterbegin", booksStr);
+
+
+    </script>
+
+    <script>
+      books = books.reverse();
+      booksStr = getBooksString();
+      let moreBox = document.querySelector(".new-book.more .new-book-list");
+      moreBox.insertAdjacentHTML("afterbegin", booksStr);
+    </script>
+
+    <script>
+      // 选择页面上第一个具有类名 .update-btn 的元素
+      var updateButton = document.querySelector(".update-btn");
+
+      updateButton.addEventListener("click", function () {
+        books = books.reverse();
+        booksStr = getBooksString();
+        listBox = document.querySelector(".new-book.list .new-book-list");
+        while (listBox.firstChild) {
+            listBox.removeChild(listBox.firstChild);
+        }
+        listBox.insertAdjacentHTML("afterbegin", booksStr);
+      });
+    </script>
+
+    <script>
+      var navs = [
+        {
+          name: "书架",
+          icon: "icon-bookshelfshujia",
+          href: "/index.html",
+          class: "",
+        },
+        {
+          name: "精选",
+          icon: "icon-jingxuan",
+          href: "/featured.html",
+          class: "active",
+        },
+        {
+          name: "听书",
+          icon: "icon-tingshu",
+          href: "/audiobook.html",
+          class: "",
+        },
+        {
+          name: "发现",
+          icon: "icon-faxian",
+          href: "/discover.html",
+          class: "",
+        },
+        {
+          name: "我",
+          icon: "icon-xiaolian",
+          href: "/user.html",
+          class: "",
+        },
+      ];
+      // 使用 map 方法生成 HTML 字符串
+      var navsStr = navs
+        .map(function (nav) {
+          return `
+    <a class="fixed-nav-item ${nav.class}" href="${nav.href}">
+      <i class="iconfont ${nav.icon}"></i>
+      <span>${nav.name}</span>
+    </a>
+  `;
+        })
+        .join("");
+
+      // 选择要插入 HTML 的容器
+      var container = document.querySelector(".fixed-nav"); // 假设你有一个 id 为 navContainer 的元素
+
+      // 将生成的 HTML 字符串插入到容器中
+      container.innerHTML = navsStr;
+    </script>
+  </body>
+</html>

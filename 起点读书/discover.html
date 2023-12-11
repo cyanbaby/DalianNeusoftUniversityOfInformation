@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>发现</title>
+    <link rel="stylesheet" href="iconfont/iconfont.css" />
+
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        min-width: 23.4375rem;
+      }
+
+      .fixed-nav {
+        height: 4.6875rem;
+        display: flex;
+        justify-content: space-between;
+        border-top: 0.0625rem solid #e2e2e2;
+        background-color: #fff;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        color: #f82c3d;
+      }
+
+      .fixed-nav .fixed-nav-item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #000;
+      }
+      .active.fixed-nav-item {
+        color: #fc2c40;
+      }
+
+      .fixed-nav-item span {
+        font-size: 0.875rem;
+      }
+
+      .fixed-nav .fixed-nav-item .iconfont {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .flex {
+        display: flex;
+      }
+
+      .ml-auto {
+        margin-left: auto;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      .discover-box {
+        margin-bottom: 5.6875rem;
+        overflow: hidden;
+      }
+      body {
+        background-color: #f6f6f6;
+      }
+      .discover-tabs {
+        display: flex;
+        align-items: center;
+        padding-left: 0.625rem;
+        padding-right: 0.625rem;
+        background-color: #f8f8f8;
+        padding-top: 1.25rem;
+      }
+      .discover-tabs .tabs {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+      }
+      .discover-tabs .tabs .active {
+        font-size: 1.125rem;
+        font-weight: bold;
+        padding-bottom: 0.5rem;
+        border-bottom: 0.0625rem solid #fb2c40;
+      }
+      .discover-tabs .tabs span {
+        margin-left: 1.25rem;
+      }
+      .discover-tabs .icons {
+        width: 3.75rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .discover-tabs .icons .iconfont {
+        font-size: 1.875rem;
+      }
+      .discover-tabs .icons .icon-wode1 {
+        font-size: 1.25rem;
+      }
+      .guanzhu {
+        margin-top: 1rem;
+        background-color: #fff;
+        padding-bottom: 1rem;
+      }
+      .guanzhu-hader {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 0.625rem;
+        padding-right: 0.625rem;
+        height: 3.625rem;
+        border-bottom: 0.0625rem solid #ececec;
+        align-items: center;
+      }
+      .user {
+        display: flex;
+        padding-left: 0.625rem;
+        padding-right: 0.625rem;
+        align-items: center;
+        margin-top: 0.625rem;
+      }
+      .user-head img {
+        width: 3.75rem;
+        height: 3.75rem;
+        border-radius: 50%;
+        margin-right: 1.25rem;
+      }
+      .title {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        overflow: hidden;
+      }
+      .title > div {
+        display: flex;
+      }
+      .title img {
+        height: 1.5rem;
+        margin-left: 0.5rem;
+      }
+      .title .type {
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: #858585;
+        font-size: 0.875rem;
+      }
+      .title .title-text {
+        font-size: 1rem;
+      }
+      .guanzhu-btn-box {
+        margin-left: auto;
+      }
+      .guanzhu-btn {
+        background-color: #f9303a;
+        color: #fff;
+        display: flex;
+        height: 1.25rem;
+        border-radius: 1.25rem;
+        justify-content: center;
+        align-items: center;
+        line-height: 1;
+        padding-left: 0.6rem;
+        padding-right: 0.6rem;
+        font-size: 0.75rem;
+      }
+      .zuoping-item {
+        padding: 1rem;
+        margin-bottom: 0.5rem;
+        display: flex;
+        background-color: #f6f6f6;
+        margin-left: 0.625rem;
+        margin-right: 0.625rem;
+        border-radius: 0.375rem;
+      }
+      .zuoping-item img {
+        height: 6.25rem;
+        border-radius: 0.375rem;
+        margin-right: 0.75rem;
+      }
+      .zuoping-item .zuoping-item-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .zuoping-item .book-tip {
+        color: #868686;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="discover-box">
+      <div class="discover-tabs">
+        <div class="icons"></div>
+        <div class="tabs">
+          <span class="active">关注</span>
+          <span>广场</span>
+        </div>
+        <div class="icons">
+          <i class="iconfont icon-sousuo"></i>
+          <i class="iconfont icon-wode1"></i>
+        </div>
+      </div>
+
+      <div class="guanzhu">
+        <div class="guanzhu-hader">
+          <span>热门关注</span>
+          <i class="iconfont icon-xiangyou1"></i>
+        </div>
+
+        <div class="user">
+          <div class="user-head">
+            <img src="/images/discover/user-header-01.jpg" alt="头像" />
+          </div>
+          <div class="title">
+            <div>
+              <span class="title-text">横扫天涯</span>
+              <img src="/images/discover/tag-blue.png" alt="blue" />
+              <img src="/images/discover/tab-orange.png" alt="orange" />
+            </div>
+            <div class="type">阅文集团白金作家，擅长玄幻小说题材</div>
+          </div>
+          <div class="guanzhu-btn-box">
+            <div class="guanzhu-btn">
+              <span class="plus">+</span><span>关注</span>
+            </div>
+          </div>
+        </div>
+        <div class="zuoping">
+          <div class="zuoping-item">
+            <img src="images/home/book-01.png" alt="明朝那些事" />
+            <div class="zuoping-item-right">
+              <div class="book-title">明朝那些事</div>
+              <div class="book-tip">玄幻 · 完本 · 165万</div>
+            </div>
+          </div>
+
+          <div class="zuoping-item">
+            <img src="images/home/book-02.png" alt="明朝那些事" />
+            <div class="zuoping-item-right">
+              <div class="book-title">明朝那些事</div>
+              <div class="book-tip">玄幻 · 完本 · 165万</div>
+            </div>
+          </div>
+
+          <div class="zuoping-item">
+            <img src="images/home/book-03.png" alt="明朝那些事" />
+            <div class="zuoping-item-right">
+              <div class="book-title">明朝那些事</div>
+              <div class="book-tip">玄幻 · 完本 · 165万</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="guanzhu">
+        <div class="guanzhu-hader">
+          <span>热门关注</span>
+          <i class="iconfont icon-xiangyou1"></i>
+        </div>
+
+        <div class="user">
+          <div class="user-head">
+            <img src="/images/discover/user-header-01.jpg" alt="头像" />
+          </div>
+          <div class="title">
+            <div>
+              <span class="title-text">横扫天涯</span>
+              <img src="/images/discover/tag-blue.png" alt="blue" />
+              <img src="/images/discover/tab-orange.png" alt="orange" />
+            </div>
+            <div class="type">阅文集团白金作家，擅长玄幻小说题材</div>
+          </div>
+          <div class="guanzhu-btn-box">
+            <div class="guanzhu-btn">
+              <span class="plus">+</span><span>关注</span>
+            </div>
+          </div>
+        </div>
+        <div class="zuoping">
+          <div class="zuoping-item">
+            <img src="images/home/book-01.png" alt="明朝那些事" />
+            <div class="zuoping-item-right">
+              <div class="book-title">明朝那些事</div>
+              <div class="book-tip">玄幻 · 完本 · 165万</div>
+            </div>
+          </div>
+
+          <div class="zuoping-item">
+            <img src="images/home/book-02.png" alt="明朝那些事" />
+            <div class="zuoping-item-right">
+              <div class="book-title">明朝那些事</div>
+              <div class="book-tip">玄幻 · 完本 · 165万</div>
+            </div>
+          </div>
+
+          <div class="zuoping-item">
+            <img src="images/home/book-03.png" alt="明朝那些事" />
+            <div class="zuoping-item-right">
+              <div class="book-title">明朝那些事</div>
+              <div class="book-tip">玄幻 · 完本 · 165万</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="fixed-nav"></div>
+    </div>
+    <script>
+      const books = [
+        {
+          title: "大明：我，祝你生日快乐，生日快乐，生日快乐，生日快乐",
+          url: "images/home/book-01.png",
+          tip: "未读过",
+          tag: "推荐",
+        },
+        {
+          title: "明朝那些事",
+          url: "images/home/book-02.png",
+          tip: "未读过",
+          tag: "推荐",
+        },
+        {
+          title: "明朝那些事",
+          url: "images/home/book-03.png",
+          tip: "未读过",
+          tag: "推荐",
+        },
+        {
+          title: "明朝那些事",
+          url: "images/home/book-04.png",
+          tip: "未读过",
+          tag: "推荐",
+        },
+        {
+          title: "明朝那些事",
+          url: "images/home/book-05.png",
+          tip: "未读过",
+          tag: "推荐",
+        },
+      ];
+
+      // 使用 map 方法生成 HTML 字符串
+      const booksStr = books
+        .map((book) => {
+          return `
+    <div class="book-item">
+      <img src="${book.url}" alt="">
+      <span class="book-title">${book.title}</span>
+      <span class="hui-text">${book.tip}</span>
+      <span class="right-tag">${book.tag}</span>
+    </div>
+  `;
+        })
+        .join("");
+
+      // 获取目标元素
+      const listBox = document.querySelector(".list-box");
+
+      // 将生成的 HTML 字符串插入到目标元素的开始位置
+      listBox.insertAdjacentHTML("afterbegin", booksStr);
+    </script>
+
+    <script>
+      var navs = [
+        {
+          name: "书架",
+          icon: "icon-bookshelfshujia",
+          href: "/index.html",
+          class: "",
+        },
+        {
+          name: "精选",
+          icon: "icon-jingxuan",
+          href: "/featured.html",
+          class: "",
+        },
+        {
+          name: "听书",
+          icon: "icon-tingshu",
+          href: "/audiobook.html",
+          class: "",
+        },
+        {
+          name: "发现",
+          icon: "icon-faxian",
+          href: "/discover.html",
+          class: "active",
+        },
+        {
+          name: "我",
+          icon: "icon-xiaolian",
+          href: "/user.html",
+          class: "",
+        },
+      ];
+      // 使用 map 方法生成 HTML 字符串
+      var navsStr = navs
+        .map(function (nav) {
+          return `
+    <a class="fixed-nav-item ${nav.class}" href="${nav.href}">
+      <i class="iconfont ${nav.icon}"></i>
+      <span>${nav.name}</span>
+    </a>
+  `;
+        })
+        .join("");
+
+      // 选择要插入 HTML 的容器
+      var container = document.querySelector(".fixed-nav"); // 假设你有一个 id 为 navContainer 的元素
+
+      // 将生成的 HTML 字符串插入到容器中
+      container.innerHTML = navsStr;
+    </script>
+  </body>
+</html>

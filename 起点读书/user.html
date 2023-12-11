@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>首页</title>
+    <link rel="stylesheet" href="iconfont/iconfont.css" />
+
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        min-width: 23.4375rem;
+      }
+
+      .fixed-nav {
+        height: 4.6875rem;
+        display: flex;
+        justify-content: space-between;
+        border-top: 0.0625rem solid #e2e2e2;
+        background-color: #fff;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        color: #f82c3d;
+      }
+
+      .fixed-nav .fixed-nav-item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #000;
+      }
+      .active.fixed-nav-item {
+        color: #fc2c40;
+      }
+
+      .fixed-nav-item span {
+        font-size: 0.875rem;
+      }
+      a {
+        text-decoration: none;
+      }
+
+      
+    </style>
+  </head>
+
+  <body>
+    <div class="index-box">
+
+        
+
+      <div class="fixed-nav">
+      </div>
+    </div>
+    <script>
+        
+    </script>
+
+    <script>
+      var navs = [
+        {
+          name: "书架",
+          icon: "icon-bookshelfshujia",
+          href: "/index.html", 
+          class: ''
+        },
+        {
+          name: "精选",
+          icon: "icon-jingxuan",
+          href: "/featured.html",
+          class: ''
+        },
+        {
+          name: "听书",
+          icon: "icon-tingshu",
+          href: "/audiobook.html",
+          class: ''
+        },
+        {
+          name: "发现",
+          icon: "icon-faxian",
+          href: "/discover.html",
+          class: ''
+        },
+        {
+          name: "我",
+          icon: "icon-xiaolian",
+          href: "/user.html",
+          class: 'active'
+        },
+      ];
+      // 使用 map 方法生成 HTML 字符串
+      var navsStr = navs
+        .map(function (nav) {
+          return `
+    <a class="fixed-nav-item ${nav.class}" href="${nav.href}">
+      <i class="iconfont ${nav.icon}"></i>
+      <span>${nav.name}</span>
+    </a>
+  `;
+        })
+        .join("");
+
+      // 选择要插入 HTML 的容器
+      var container = document.querySelector(".fixed-nav"); // 假设你有一个 id 为 navContainer 的元素
+
+      // 将生成的 HTML 字符串插入到容器中
+      container.innerHTML = navsStr;
+    </script>
+  </body>
+</html>
