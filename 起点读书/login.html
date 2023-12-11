@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>登录</title>
+
+  <style>
+
+    .top-img {
+      width: 100%;
+    }
+
+    .blue {
+      color: #2581fa;
+    }
+
+    .inline-block {
+      display: inline-block;
+    }
+
+    .logo,
+    .tip,
+    .login-wrap,
+    .input-box,
+    .footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .footer-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .ui-checkbox {
+      color: #ED4259;
+      background-color: #ED4259;
+      display: inline-block;
+      width: 1.25rem;
+      height: 1.25rem;
+      border: 0.25rem solid transparent;
+      border-radius: 100%;
+      box-sizing: border-box;
+      margin-right: 0.5rem;
+    }
+
+    .ui-checkbox::after {
+      background: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjIwMCIgaGVpZ2h0PSIyMDAiIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj4NCjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0xNDcuNTY3LDY3LjU3NWMtMy45NzgtMy4yNDEtNC4zNTYtMy4zMzctOC45LTUuNjM5Yy0yLjA0NC0xLjA0NC01LjA1NywxLjY0NS02LjUzLDMuNjM1TDkyLDExNy43MjgNCglMNjUuODUxLDgzLjk3M2MtMS40NzktMS45ODgtNC4yMDYtMi43Mi02LjI1MS0xLjc4MmMtNC42NTgsMi40MDctNC4xODksMi4zMjYtOC4xNjgsNS40NjZjLTEuODE3LDEuNDY2LTEuOTMyLDQuMDgyLTAuNDU2LDYuMDY1DQoJYzAsMCwyOC4xODMsMzYuNDk5LDMxLjU5Miw0MC44OTZjNC45OTksNi4yNzUsMTQuMDksNS45NjUsMTguODY0LDBjMy41Mi00LjQ5OCw0Ni41OS02MS4wNzgsNDYuNTktNjEuMDc4DQoJQzE0OS40OTksNzEuNTQ5LDE0OS4zODUsNjguOTM3LDE0Ny41NjcsNjcuNTc1eiIvPg0KPC9zdmc+DQo=) no-repeat center;
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      transform: scale(0.8);
+      background-size: 1.25rem 1.25rem;
+    }
+
+    .login-wrap,
+    .tip {
+      margin-top: 1rem;
+    }
+
+    .login-wrap-btn {
+      background: linear-gradient(to right, #EE434C, #F14B4E);
+      width: 68%;
+      border-radius: 1rem;
+      color: #fff;
+      text-align: center;
+      font-size: 1.125rem;
+      line-height: 2;
+      margin-bottom: 1rem;
+    }
+
+    .logo-img {
+      height: 3.375rem;
+    }
+
+    .input-box {
+      margin-top: 1rem;
+    }
+    .footer-label {
+      margin-top: 1rem;
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+    .input-box input {
+      width: 90%;
+      height: 1.6rem;
+    }
+  </style>
+</head>
+
+<body>
+  <form action="/index.html" class="form-example">
+    <div class="top">
+      <img class="top-img" src="./images/login/top.png" alt="top" />
+    </div>
+    <div class="logo">
+      <img class="logo-img" src="./images/login/logo.png" alt="logo" />
+    </div>
+
+    <div class="input-box">
+      <input type="text" name="phonme" id="phonme" required placeholder="请输入手机号" />
+    </div>
+
+    <div class="tip">
+      <span class="inline-block ui-checkbox"></span>登录即代表同意 <span class="blue">《用户服务协议》</span
+        class="blue">和<span>《隐私政策》</span>
+    </div>
+    <div class="login-wrap">
+      <input type="submit" value="提交" class="login-wrap-btn" />
+    </div>
+    <div class="footer">
+      <div class="footer-item">
+        <svg height="48" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle cx="24" cy="24" fill="#ebf9ff" r="23" stroke="#dcedf5" stroke-width="2"/><path d="m32.9939024 27.3578448c-.4165102-2.4363608-2.1661105-4.0323903-2.1661105-4.0323903.2500348-2.2117837-.6665449-2.6042937-.6665449-2.6042937-.1928289-6.8432681-6.0381134-6.7239824-6.1615239-6.7206504-.1227676-.003332-5.9693377-.1226177-6.160881 6.7206504 0 0-.9165797.39251-.666545 2.6042937 0 0-1.7496002 1.5960295-2.1661105 4.0323903 0 0-.2223959 4.1163567 1.9996349.5037988 0 0 .4994267 1.372119 1.4160064 2.6042937 0 0-1.6384023.560443-1.4995655 2.0165284 0 0-.0559204 1.6233519 3.4985577 1.512063 0 0 2.4990616-.1959218 3.2491657-1.2601636h.3271663.0057849.3271662c.7501041 1.0642418 3.2491657 1.2601636 3.2491657 1.2601636 3.5531926.1112889 3.4985578-1.512063 3.4985578-1.512063.1381939-1.4560854-1.4995656-2.0165284-1.4995656-2.0165284.9165797-1.2321747 1.4160064-2.6042937 1.4160064-2.6042937 2.2207453 3.6125579 1.9996349-.5037988 1.9996349-.5037988z" fill="#00acf4"/></g></svg>
+        <div class="footer-label">QQ</div>
+      </div>
+      <div class="footer-item">
+        <svg height="48" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle cx="24" cy="24" fill="#f7f8fa" r="23" stroke="#f0f2fa" stroke-width="2"/><g fill="#dae2f2" fill-rule="nonzero" stroke="#61708f"><circle cx="14" cy="24" r="2"/><circle cx="24" cy="24" r="2"/><circle cx="34" cy="24" r="2"/></g></g></svg>
+        <div class="footer-label">阅文通行证</div>
+      </div>
+      <div class="footer-item">
+        <svg height="48" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle cx="24" cy="24" fill="#f7f8fa" r="23" stroke="#f0f2fa" stroke-width="2"/><g fill="#dae2f2" fill-rule="nonzero" stroke="#61708f"><circle cx="14" cy="24" r="2"/><circle cx="24" cy="24" r="2"/><circle cx="34" cy="24" r="2"/></g></g></svg>
+        <div class="footer-label">QQ</div>
+      </div>
+    </div>
+
+  </form>
+</body>
+
+</html>

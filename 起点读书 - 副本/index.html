@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>首页</title>
+
+  <style>
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      background-image: url(./images/home/header-bg.jpg);
+      height: 21.125rem;
+    }
+
+    .header-top {
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .header-top-left {
+      width: 5.75rem;
+      height: 1.125rem;
+      background: url(/images/home/logo.svg) no-repeat 100%/100%;
+      color: transparent;
+    }
+
+    .header-top-left h1 {
+      font-size: 0;
+    }
+
+    .header-top-right {
+      background-color: rgba(229, 53, 62, 0.1);
+      width: 4.375rem;
+      height: 1.75rem;
+      color: #e5353e;
+      font-weight: bold;
+      border-radius: 1.5rem;
+      font-size: 0.8rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      line-height: 1;
+      margin-left: auto;
+    }
+
+    .swiper-box {
+      padding: .75rem;
+    }
+
+    .search {
+      padding: .75rem .75rem .75rem 0;
+      display: flex;
+    }
+
+    .search input {
+      height: 2.25rem;
+      margin-left: .8125rem;
+      width: 100%;
+    }
+
+    .swiper-slide img {
+      width: 100%;
+    }
+  </style>
+  <link rel="stylesheet" href="swiper/swiper-bundle.min.css" />
+</head>
+
+<body>
+  <div class="header">
+    <div class="header-top">
+      <div class="header-top-left">
+        <a href="//m.qidian.com/" title="起点中文小说网">
+          <h1>起点中文网</h1>
+        </a>
+      </div>
+      <div class="header-top-right">打开app</div>
+    </div>
+
+    <div class="search">
+      <input type="text" name="search" id="search" required placeholder="选择C级英雄，我被全网嘲笑三年" />
+    </div>
+    <div class="swiper-box">
+      <div class="swiper my-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./images/home/banner-01.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/home/banner-02.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/home/banner-03.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/home/banner-04.jpg" />
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+
+
+
+    <script src="swiper/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".my-swiper", {
+        loop: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      })
+
+      var navs = [{
+        url: 'images/nav-01.png',
+        text: '分类'
+      }]
+    </script>
+  </div>
+
+</body>
+
+</html>
